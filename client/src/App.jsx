@@ -9,7 +9,9 @@ function App() {
       <SocketContextProvider>
         <div className="h-full w-full flex">
           <Chat />
-          <ConnectedUsersList />
+          <div className="hidden xl:flex xl:w-1/4">
+            <ConnectedUsersList />
+          </div>
         </div>
       </SocketContextProvider>
     </StatusContextProvider>

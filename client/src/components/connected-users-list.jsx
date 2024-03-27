@@ -31,16 +31,16 @@ function ConnectedUsersList() {
   }, [socket]);
 
   return (
-    <div className="hidden  xl:w-1/4 h-full xl:flex flex-col bg-slate-500 ">
-      <div className=" bg-white flex items-center gap-4 px-6 py-3 text-3xl ">
-        <FaUsers className="w-7 h-7" />
+    <div className="w-full h-44 xl:h-full flex flex-col bg-slate-300  xl:bg-slate-500">
+      <div className=" bg-white flex items-center gap-4 px-6 py-2 xl:py-3 text-base font-semibold xl:text-3xl ">
+        <FaUsers className="xl:w-7 xl:h-7 w-4 h-4" />
         CONNECTED USERS
       </div>
-      <div className="flex-grow flex flex-col gap-3 p-4">
+      <div className="flex-grow flex flex-col gap-1 xl:gap-3 p-2 xl:p-4 overflow-y-auto h-full">
         {users.map((user) => (
           <div
             key={user.id + user.status}
-            className="bg-white p-2 rounded-md flex items-center gap-2"
+            className="bg-white p-1 xl:p-2 rounded-md flex items-center gap-2"
           >
             <RiRadioButtonLine
               fill={user.status === "online" ? "limegreen" : "red"}
